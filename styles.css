@@ -1,0 +1,349 @@
+html {
+    background-color: #020659;
+}
+
+body {
+    margin: 0px auto;
+    font-family: optima, sans-serif;
+    background-color: #ffffff;
+    color: #ffffff;
+    width: 375px;
+}
+h1 {
+    font-size: 22px;
+    line-height: 2em;
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+h2 {
+    padding-left: 15px;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 20px;
+    color: #590242;
+    line-height: 2em;
+}
+
+header {
+    padding-top: 60px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(to right, #2104D9, #020659)
+}
+header p {
+    font-size: 20px;
+    padding-left: 30px;
+}
+a:hover, input:hover {
+    background-color: #590242;
+}
+nav {
+    width: 375px;
+    height: 60px;
+    background-color: #030abc;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+}
+nav ul {
+    text-align: center;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+div {
+    display: inline-block;
+}
+ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #2104d9;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.more:hover {
+    background-color: #020659;
+}
+#trending h3, #trending dl {
+    color: #590242;
+}
+
+[href="#home"] {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    padding: 15px 16px;
+}
+footer {
+    text-align: center;
+    color: #590242;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+dl {
+    display: flex;
+    margin-top: -20px;
+}
+dd {
+    font-size: 16px;
+    color: #590242;
+    margin: 0px;
+}
+dt {
+    padding-right: 5px;
+    font-size: 15px;
+    font-style: italic;
+    color: #590242;
+}
+.more {
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 250px;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scoll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+audio {
+    position: absolute;
+    bottom: 90px;
+    left: 21px;
+}
+label {
+    cursor: pointer;
+    display: block;
+    padding: 28px 20px;
+    margin-top: 10px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background-color: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span::after {
+    top: 0;
+}
+
+#trending section {
+    display: grid;
+    background-color: #ffffff;
+    padding-left: 15px;
+}
+
+#playlists .scroll {
+    background-color: #2699fb;
+    display: block;
+    width: 417px;
+}
+#curated .scroll {
+    background-color: #030abc;
+    display: block;
+    width: 417px;
+}
+#playlists section {
+    padding: 10px;
+    display: grid;
+    background-color: #0d8dfb;
+}
+
+#curated section {
+    padding: 10px;
+    display: grid;
+    background-color: #020873;
+    
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius:  50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius:  50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, .5);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow:inset 0 0 15px #020659
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+@media screen and (min-width:834px) {
+    body {
+        width: 834px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 417px 417px;
+    }
+    nav {
+        width: 834px;
+    }
+    nav a {
+        display: block;
+    }
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px;
+        align-items: center;
+        width: 834px;
+    }
+    .more {
+        float: right;
+    }
+    label span, input {
+        display: none;
+    }
+    li {
+        margin: 0px;
+        padding: 0px;
+    }
+    [href="home"], li a{
+        box-sizing: border-box;
+        height: 100%;
+        padding: 12px;
+    }
+    [href="home"] {
+        position: static;
+    }
+    #trending {
+        width: 834px;
+    }
+    #playlists {
+        width: 350px;
+    }
+    #curated {
+        width: 350px;
+    }
+    #playlists p, #curated p {
+        position: absolute;
+        padding-right: 35px;
+        top: 27px;
+        left: 190px;
+        text-align: center;
+    }
+    #playlists h3, #curated h3 {
+        position: absolute;
+        top: -15px;
+        left: 190px;
+        
+    }
+    #playlists section, #curated section {
+        width: 350px;
+        height: 115px;
+    }
+    #playlists img, #curated img {
+        float: left;
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    #playlists .scroll, #curated .scroll {
+        grid-template-columns: 417px;
+        row-gap: 100px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 510px;
+    }
+}
